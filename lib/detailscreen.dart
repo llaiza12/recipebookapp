@@ -126,27 +126,7 @@ class BistekDetails extends StatelessWidget {
   }
 }
 
-// Chicken Sandwich Recipe Details
-class SandwichDetails extends StatelessWidget {
-  const SandwichDetails({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 75,
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Chicken Sandwich Recipe Details',
-            style: GoogleFonts.afacad(
-              fontSize: 40,
-            )),
-      ),
-      body: const Center(),
-    );
-  }
-}
-
-// Caldreta Recipe Details
+// Caldereta Recipe Details
 class CalderetaDetails extends StatelessWidget {
   const CalderetaDetails({super.key});
 
@@ -156,12 +136,53 @@ class CalderetaDetails extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 75,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Caldereta Recipe Details',
+        title: Text('Recipe Details',
             style: GoogleFonts.afacad(
               fontSize: 40,
             )),
       ),
-      body: const Center(),
+      body: SingleChildScrollView(
+          child: Center(
+        child: Padding(
+          padding: EdgeInsets.all(15.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text("Caldereta",
+                  style: Theme.of(context).textTheme.displaySmall,
+                  textAlign: TextAlign.center),
+              SizedBox(height: 10),
+              Image.asset('assets/Caldereta.jpg', height: 250, width: 250),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  Text(
+                    "Ingredients: ",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    textAlign: TextAlign.left,
+                  ),
+                  Text(
+                    "1 chuck roast\n1 onion\ntomato sauce\npotatoes\ncarrots\npeas\nbell peppers\ncaldereta mix",
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  Text(
+                    "Instructions: ",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  Text(
+                      "1. Quarter onion and slice meat into cubes.\n2. Heat pan and sear meat at 4. Add onion and stir. Add half can (4oz) of tomato sauce. Turn up heat to 6 and add 16 oz. water. Add small handful of peppercorn.\n3. Put on lid and when boiling set to 4, add more water if needed. Cook for 1-2 hours. Add mix and once meat is tender, add cut potatoes, sliced carrots, peas and sliced bell pepper. Cook for additional 10 minutes on high",
+                      style: Theme.of(context).textTheme.bodyLarge),
+                ],
+              ),
+            ],
+          ),
+        ),
+      )),
     );
   }
 }
@@ -176,32 +197,53 @@ class GinilingDetails extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 75,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Giniling Recipe Details',
+        title: Text('Recipe Details',
             style: GoogleFonts.afacad(
               fontSize: 40,
             )),
       ),
-      body: const Center(),
-    );
-  }
-}
-
-// Honey Tenders Recipe Details
-class HoneyTendersDetails extends StatelessWidget {
-  const HoneyTendersDetails({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 75,
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Hot Honey Tenders w/ Mac & Cheese Recipe Details',
-            style: GoogleFonts.afacad(
-              fontSize: 40,
-            )),
-      ),
-      body: const Center(),
+      body: SingleChildScrollView(
+          child: Center(
+        child: Padding(
+          padding: EdgeInsets.all(15.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text("Giniling",
+                  style: Theme.of(context).textTheme.displaySmall,
+                  textAlign: TextAlign.center),
+              SizedBox(height: 10),
+              Image.asset('assets/Giniling.jpg', height: 250, width: 250),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  Text(
+                    "Ingredients: ",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    textAlign: TextAlign.left,
+                  ),
+                  Text(
+                    "1/2 onion\n2-3 roma tomatoes\n1-2 garlic cloves\npotatoes\ncarrots\npeas\ngreen beans\nsoy sauce\nbeef bouillon\nblack pepper",
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  Text(
+                    "Instructions: ",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  Text(
+                      "1. Set stove to high, add oil to pan. Add diced onion and minced garlic. Add sliced tomatoes. Once soft, add beef and black pepper.\n2. Once browned, add potatoes, carrots, peas, green beans, 3 tbsp soy sauce. Then add beef bouilon. Add water if dry, and cook and cover til veggies cooked.",
+                      style: Theme.of(context).textTheme.bodyLarge),
+                ],
+              ),
+            ],
+          ),
+        ),
+      )),
     );
   }
 }
@@ -216,12 +258,53 @@ class TacoDetails extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 75,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Taco Recipe Details',
+        title: Text('Recipe Details',
             style: GoogleFonts.afacad(
               fontSize: 40,
             )),
       ),
-      body: const Center(),
+      body: SingleChildScrollView(
+          child: Center(
+        child: Padding(
+          padding: EdgeInsets.all(15.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text("Beef Tacos",
+                  style: Theme.of(context).textTheme.displaySmall,
+                  textAlign: TextAlign.center),
+              SizedBox(height: 10),
+              Image.asset('assets/Taco.jpg', height: 250, width: 250),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  Text(
+                    "Ingredients: ",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    textAlign: TextAlign.left,
+                  ),
+                  Text(
+                    "1 lb ground beef\n1 can of tomato sauce\ncheese\ncorn tortillas\n1 red onion\n1 yellow onion\ncilantro\ncarne asada seasoning\ncayenne pepper\npaprika\noregano\ncumin\n",
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  Text(
+                    "Instructions: ",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  Text(
+                      "1. Dice onions and saute on pan. Add ground beef til browned. Add all seasonings, then add can of tomato sauce. Set aside meat.\n2. Heat up tortillas on pan. Flip after minute, then add beef, cheese, cilantro and diced red onion.",
+                      style: Theme.of(context).textTheme.bodyLarge),
+                ],
+              ),
+            ],
+          ),
+        ),
+      )),
     );
   }
 }

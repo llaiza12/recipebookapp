@@ -121,40 +121,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
           SizedBox(height: 10),
 
-          // Chicken Sandwich Container
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const SandwichDetails()));
-            },
-            child: Container(
-              height: 200,
-              decoration: BoxDecoration(
-                  color: Colors.amber[100],
-                  borderRadius: BorderRadius.circular(20.0)),
-              child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Image.asset('assets/ChickenSandwich.jpg',
-                          height: 200, width: 200),
-                    ),
-                    Expanded(
-                      child: Text("Chicken Sandwich",
-                          style: Theme.of(context).textTheme.displayLarge),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-          SizedBox(height: 10),
-
           // Caldereta Container
           GestureDetector(
             onTap: () {
@@ -213,40 +179,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Expanded(
                       child: Text("Giniling",
-                          style: Theme.of(context).textTheme.displayLarge),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-          SizedBox(height: 10),
-
-          // HoneyTenders Container
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const HoneyTendersDetails()));
-            },
-            child: Container(
-              height: 200,
-              decoration: BoxDecoration(
-                  color: Colors.amber[100],
-                  borderRadius: BorderRadius.circular(20.0)),
-              child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Image.asset('assets/HoneyTenders.jpg',
-                          height: 200, width: 200),
-                    ),
-                    Expanded(
-                      child: Text("Hot Honey Tenders w/ Mac & Cheese",
                           style: Theme.of(context).textTheme.displayLarge),
                     ),
                   ],
