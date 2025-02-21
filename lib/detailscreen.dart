@@ -75,12 +75,53 @@ class BistekDetails extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 75,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Bistek Recipe Details',
+        title: Text('Recipe Details',
             style: GoogleFonts.afacad(
               fontSize: 40,
             )),
       ),
-      body: Center(),
+      body: SingleChildScrollView(
+          child: Center(
+        child: Padding(
+          padding: EdgeInsets.all(15.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text("Bistek",
+                  style: Theme.of(context).textTheme.displaySmall,
+                  textAlign: TextAlign.center),
+              SizedBox(height: 10),
+              Image.asset('assets/Bistek.jpg', height: 250, width: 250),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  Text(
+                    "Ingredients: ",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    textAlign: TextAlign.left,
+                  ),
+                  Text(
+                    "1 chuck roast\nsoy sauce\n14 garlic cloves\n3 limes\npeppercorn\n1 white or red onion\noptional: potatoes",
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  Text(
+                    "Instructions: ",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  Text(
+                      "1. Slice meat, add to bowl.\n2. Add soy sauce, smashed garlic cloves, smashed small handful of peppercorn and lime juice to bowl.\n3. Let marinade overnight or for a couple of hours.\n4. Set stove to medium. Add a little oil to coat bottom of pan, and fry in batches. 2 minutes per side then set aside.\n5. Fry all meat on 8. Add marinade and cover till boiling. Cook for 15-20 minutes. Slice whole onion and add to pan, stir continuously.",
+                      style: Theme.of(context).textTheme.bodyLarge),
+                ],
+              ),
+            ],
+          ),
+        ),
+      )),
     );
   }
 }
