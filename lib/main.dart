@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'detailscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -49,26 +50,34 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: ListView(scrollDirection: Axis.vertical, children: [
           // Grilled Cheese
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-              color: Colors.amber[100],
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            child: Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Image.asset('assets/GrilledCheese.jpg',
-                        height: 200, width: 200),
-                  ),
-                  Expanded(
-                    child: Text("Buffalo Chicken Grilled Cheese",
-                        style: Theme.of(context).textTheme.displayLarge),
-                  ),
-                ],
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GrilledCheeseDetails()));
+            },
+            child: Container(
+              height: 200,
+              decoration: BoxDecoration(
+                color: Colors.amber[100],
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Image.asset('assets/GrilledCheese.jpg',
+                          height: 200, width: 200),
+                    ),
+                    Expanded(
+                      child: Text("Buffalo Chicken Grilled Cheese",
+                          style: Theme.of(context).textTheme.displayLarge),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -77,150 +86,201 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(height: 10),
 
           // Bistek Container
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-                color: Colors.amber[100],
-                borderRadius: BorderRadius.circular(20.0)),
-            child: Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Image.asset('assets/Bistek2.jpg',
-                        height: 200, width: 200),
-                  ),
-                  Expanded(
-                    child: Text("Bistek",
-                        style: Theme.of(context).textTheme.displayLarge),
-                  ),
-                ],
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const BistekDetails()));
+            },
+            child: Container(
+              height: 200,
+              decoration: BoxDecoration(
+                  color: Colors.amber[100],
+                  borderRadius: BorderRadius.circular(20.0)),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Image.asset('assets/Bistek2.jpg',
+                          height: 200, width: 200),
+                    ),
+                    Expanded(
+                      child: Text("Bistek",
+                          style: Theme.of(context).textTheme.displayLarge),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
 
           SizedBox(height: 10),
 
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-                color: Colors.amber[100],
-                borderRadius: BorderRadius.circular(20.0)),
-            child: Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Image.asset('assets/ChickenSandwich.jpg',
-                        height: 200, width: 200),
-                  ),
-                  Expanded(
-                    child: Text("Chicken Sandwich",
-                        style: Theme.of(context).textTheme.displayLarge),
-                  ),
-                ],
+          // Chicken Sandwich Container
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SandwichDetails()));
+            },
+            child: Container(
+              height: 200,
+              decoration: BoxDecoration(
+                  color: Colors.amber[100],
+                  borderRadius: BorderRadius.circular(20.0)),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Image.asset('assets/ChickenSandwich.jpg',
+                          height: 200, width: 200),
+                    ),
+                    Expanded(
+                      child: Text("Chicken Sandwich",
+                          style: Theme.of(context).textTheme.displayLarge),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
 
           SizedBox(height: 10),
 
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-                color: Colors.amber[100],
-                borderRadius: BorderRadius.circular(20.0)),
-            child: Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Image.asset('assets/Caldereta.jpg',
-                        height: 200, width: 200),
-                  ),
-                  Expanded(
-                    child: Text("Caldereta",
-                        style: Theme.of(context).textTheme.displayLarge),
-                  ),
-                ],
+          // Caldereta Container
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const CalderetaDetails()));
+            },
+            child: Container(
+              height: 200,
+              decoration: BoxDecoration(
+                  color: Colors.amber[100],
+                  borderRadius: BorderRadius.circular(20.0)),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Image.asset('assets/Caldereta.jpg',
+                          height: 200, width: 200),
+                    ),
+                    Expanded(
+                      child: Text("Caldereta",
+                          style: Theme.of(context).textTheme.displayLarge),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
 
           SizedBox(height: 10),
 
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-                color: Colors.amber[100],
-                borderRadius: BorderRadius.circular(20.0)),
-            child: Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Image.asset('assets/Giniling.jpg',
-                        height: 200, width: 200),
-                  ),
-                  Expanded(
-                    child: Text("Giniling",
-                        style: Theme.of(context).textTheme.displayLarge),
-                  ),
-                ],
+          // Giniling Container
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const GinilingDetails()));
+            },
+            child: Container(
+              height: 200,
+              decoration: BoxDecoration(
+                  color: Colors.amber[100],
+                  borderRadius: BorderRadius.circular(20.0)),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Image.asset('assets/Giniling.jpg',
+                          height: 200, width: 200),
+                    ),
+                    Expanded(
+                      child: Text("Giniling",
+                          style: Theme.of(context).textTheme.displayLarge),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
 
           SizedBox(height: 10),
 
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-                color: Colors.amber[100],
-                borderRadius: BorderRadius.circular(20.0)),
-            child: Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Image.asset('assets/HoneyTenders.jpg',
-                        height: 200, width: 200),
-                  ),
-                  Expanded(
-                    child: Text("Hot Honey Tenders w/ Mac & Cheese",
-                        style: Theme.of(context).textTheme.displayLarge),
-                  ),
-                ],
+          // HoneyTenders Container
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const HoneyTendersDetails()));
+            },
+            child: Container(
+              height: 200,
+              decoration: BoxDecoration(
+                  color: Colors.amber[100],
+                  borderRadius: BorderRadius.circular(20.0)),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Image.asset('assets/HoneyTenders.jpg',
+                          height: 200, width: 200),
+                    ),
+                    Expanded(
+                      child: Text("Hot Honey Tenders w/ Mac & Cheese",
+                          style: Theme.of(context).textTheme.displayLarge),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
 
           SizedBox(height: 10),
 
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-                color: Colors.amber[100],
-                borderRadius: BorderRadius.circular(20.0)),
-            child: Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child:
-                        Image.asset('assets/Taco.jpg', height: 200, width: 200),
-                  ),
-                  Expanded(
-                    child: Text("Tacos",
-                        style: Theme.of(context).textTheme.displayLarge),
-                  ),
-                ],
+          // Tacos Container
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const TacoDetails()));
+            },
+            child: Container(
+              height: 200,
+              decoration: BoxDecoration(
+                  color: Colors.amber[100],
+                  borderRadius: BorderRadius.circular(20.0)),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Image.asset('assets/Taco.jpg',
+                          height: 200, width: 200),
+                    ),
+                    Expanded(
+                      child: Text("Tacos",
+                          style: Theme.of(context).textTheme.displayLarge),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
