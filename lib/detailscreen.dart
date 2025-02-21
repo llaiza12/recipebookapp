@@ -11,12 +11,43 @@ class GrilledCheeseDetails extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 75,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Grilled Cheese Recipe Details',
+        title: Text('Recipe Details',
             style: GoogleFonts.afacad(
               fontSize: 40,
             )),
       ),
-      body: const Center(),
+      body: Center(
+          child: Padding(
+        padding: EdgeInsets.all(25.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text("Stir Fry",
+                style: Theme.of(context).textTheme.displaySmall,
+                textAlign: TextAlign.center),
+            SizedBox(height: 10),
+            Image.asset('assets/stirfry.jpg', height: 250, width: 250),
+            SizedBox(height: 20),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  "Ingredients:",
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Text(
+                  "Instructions: ",
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ],
+            ),
+          ],
+        ),
+      )),
     );
   }
 }

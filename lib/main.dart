@@ -19,8 +19,10 @@ class MyApp extends StatelessWidget {
 
         // Define the default text styling
         textTheme: TextTheme(
-          displayLarge: GoogleFonts.afacad(fontSize: 30),
-        ),
+            displayLarge: GoogleFonts.afacad(fontSize: 30),
+            displaySmall: GoogleFonts.afacad(fontSize: 25),
+            bodyLarge: GoogleFonts.afacad(fontSize: 20),
+            bodySmall: GoogleFonts.afacad(fontSize: 12)),
       ),
       home: const MyHomePage(title: "Laiza's Recipe Book"),
     );
@@ -49,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ListView(scrollDirection: Axis.vertical, children: [
-          // Grilled Cheese
+          // Stir Fry
           GestureDetector(
             onTap: () {
               Navigator.push(
@@ -69,11 +71,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      child: Image.asset('assets/GrilledCheese.jpg',
+                      child: Image.asset('assets/stirfry.jpg',
                           height: 200, width: 200),
                     ),
                     Expanded(
-                      child: Text("Buffalo Chicken Grilled Cheese",
+                      child: Text("Stir Fry",
                           style: Theme.of(context).textTheme.displayLarge),
                     ),
                   ],
