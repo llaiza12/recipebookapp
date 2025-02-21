@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(
             displayLarge: GoogleFonts.afacad(fontSize: 30),
             displaySmall: GoogleFonts.afacad(fontSize: 25),
-            bodyLarge: GoogleFonts.afacad(fontSize: 20),
-            bodySmall: GoogleFonts.afacad(fontSize: 12)),
+            bodyLarge: GoogleFonts.afacad(fontSize: 18),
+            bodySmall: GoogleFonts.afacad(fontSize: 16)),
       ),
       home: const MyHomePage(title: "Laiza's Recipe Book"),
     );
